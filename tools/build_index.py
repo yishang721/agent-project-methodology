@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""踩坑总索引生成器：扫描对策库各领域 md，提取症状式卡标题/标签/状态，输出总索引表。
+"""踩坑总索引生成器：扫描 pitfalls/ 下各领域 md，提取症状式卡标题/标签/状态，输出总索引表。
 
-用法: python build_index.py [对策库根目录]
+用法: python build_index.py [踩坑库根目录]   （例：python tools/build_index.py pitfalls/）
 产物: <根>/踩坑总索引.md  —— 自动生成勿手改，卡片有增删后重跑本脚本。
 容错: 缺 标签/状态 行的卡在表中显示 "—"，不代表卡有问题，点回原文件查看。
 """
@@ -40,7 +40,7 @@ for fn in sorted(os.listdir(ROOT)):
         rows.append((fn[:-3], title, tags, st))
 
 lines = [
-    "# 踩坑总索引（对策库一览）",
+    "# 踩坑总索引",
     "",
     f"> 由 `_tools/build_index.py` 自动生成 · 共 {len(rows)} 张卡 · 检索用 Grep：命中症状行 → 打开对应领域文件读卡全文。",
     "> 单项目坑（车载日志等）不入此表；改卡后重跑生成脚本，勿手改本文件。",
