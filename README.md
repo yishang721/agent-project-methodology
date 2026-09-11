@@ -96,6 +96,7 @@
 ```
 agent-project-methodology/
 ├── README.md                  ← 你在这里
+├── CHANGELOG.md               ← 更新记录（每次实质变更）
 ├── CREDITS.md                 ← 致谢与出处（双层：体系归属 + 内容上游）
 ├── LICENSE                    ← MIT
 ├── skills/
